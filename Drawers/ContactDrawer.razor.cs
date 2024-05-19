@@ -57,7 +57,7 @@ public partial class ContactDrawer
     {
 
         // JS.
-        await JS.InvokeAsync<object>("ShowDrawer", $"drawer-{Key}", $"drawer-close-{Key}", $"btn-{Key}");
+        await JS.InvokeAsync<object>("ShowDrawer", $"drawer-{Key}", DotNetObjectReference.Create(this), $"drawer-close-{Key}", $"btn-{Key}");
 
         // Nuevo estado.
         StateHasChanged();

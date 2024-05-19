@@ -6,21 +6,21 @@
 <div @onclick="Open" class="bg-[#f2f1f6] mb-2 flex items-center justify-between rounded-lg p-3 dark:bg-zinc-900">
   
     @* Información *@
-    <div class="flex items-center">
+    <div class="flex items-center overflow-hidden">
 
         @* Imagen *@
         @if (string.IsNullOrWhiteSpace(Base64))
         {
-            <div class="mr-3 flex h-9 w-9 items-center justify-center rounded-full bg-zinc-200 text-xs font-semibold uppercase text-gray-700 dark:bg-zinc-700 dark:text-zinc-300">@Global.Utilities.Strings.GetInitials(Modelo?.Nombre)</div>
+            <div class="mr-3 flex h-9 w-9 min-w-9 items-center justify-center rounded-full bg-zinc-200 text-xs font-semibold uppercase text-gray-700 dark:bg-zinc-700 dark:text-zinc-300">@Global.Utilities.Strings.GetInitials(Modelo?.Nombre)</div>
         }
         else
         {
-            <img class="mr-3 h-9 w-9 rounded-full" src="data:image/png;base64,@Base64" alt="Avatar">
+            <img class="mr-3 h-9 w-9 min-w-9 rounded-full" src="data:image/png;base64,@Base64" alt="Avatar">
         }
 
         @* Datos. *@
         <div class="flex flex-col justify-center">
-            <p class="font-semibold dark:text-zinc-300">@Modelo?.Nombre</p>
+            <p class="text-ellipsis whitespace-nowrap font-semibold dark:text-zinc-300">@Modelo?.Nombre</p>
             <p class="-mt-1 text-sm text-zinc-500 dark:text-zinc-300">@(Modelo?.Mails.FirstOrDefault()?.Email ?? Modelo?.Phones.FirstOrDefault()?.Number ?? "Sin datos")</p>
         </div>
 
@@ -28,7 +28,7 @@
 
 
     @* Botones *@
-    <div class="flex items-center justify-center gap-2">
+    <div class="ml-2 flex items-center justify-center gap-2">
 
         @* Llamada *@
         <button @onclick:stopPropagation="true" @onclick="Call" class="bg-green-500/15 rounded-full p-2 text-green-500 hover:text-green-600 hover:bg-green/20">

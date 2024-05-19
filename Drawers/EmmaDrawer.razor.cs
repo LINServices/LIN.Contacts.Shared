@@ -32,7 +32,7 @@ public partial class EmmaDrawer
     /// </summary>
     public async void Show()
     {
-        await js.InvokeAsync<object>("ShowDrawer", $"drawerEmma-{UniqueId}", $"close-drawerEmma-{UniqueId}");
+        await js.InvokeAsync<object>("ShowDrawer", $"drawerEmma-{UniqueId}", DotNetObjectReference.Create(this), $"close-drawerEmma-{UniqueId}");
         StateHasChanged();
     }
 

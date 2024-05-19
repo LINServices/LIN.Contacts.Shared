@@ -71,7 +71,7 @@ public partial class ContactEdit
         ContactType = (int)model.Type;
 
         // JS.
-        await JS.InvokeAsync<object>("ShowDrawer", $"drawer-{Key}", $"drawer-close-{Key}", $"update-{Key}");
+        await JS.InvokeAsync<object>("ShowDrawer", $"drawer-{Key}", DotNetObjectReference.Create(this), $"drawer-close-{Key}", $"update-{Key}");
 
         // Nuevo estado.
         StateHasChanged();

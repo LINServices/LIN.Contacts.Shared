@@ -11,7 +11,7 @@ public partial class ContactModal
     /// Acción al presionar sobre el botón de editar.
     /// </summary>
     [Parameter]
-    public Action<ContactModel> OnEdit { get; set; } = (e) => { };
+    public Action<ContactModel?> OnEdit { get; set; } = (e) => { };
 
 
 
@@ -19,7 +19,7 @@ public partial class ContactModal
     /// Acción al presionar sobre el botón de editar.
     /// </summary>
     [Parameter]
-    public Action<ContactModel> OnSend { get; set; } = (e) => { };
+    public Action<ContactModel?> OnSend { get; set; } = (e) => { };
 
 
 
