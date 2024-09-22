@@ -3,7 +3,7 @@
 
 
 @* Contenido *@
-<div @onclick="Open" class="bg-[#f2f1f6] mb-2 flex items-center justify-between rounded-lg p-3 dark:bg-zinc-900">
+<div @onclick="Open" class="mb-2 flex items-center justify-between rounded-full bg-zinc-100 p-2 dark:bg-zinc-900">
   
     @* Información *@
     <div class="flex items-center overflow-hidden">
@@ -11,11 +11,11 @@
         @* Imagen *@
         @if (string.IsNullOrWhiteSpace(Base64))
         {
-            <div class="mr-3 flex h-9 w-9 min-w-9 items-center justify-center rounded-full bg-zinc-200 text-xs font-semibold uppercase text-gray-700 dark:bg-zinc-700 dark:text-zinc-300">@Global.Utilities.Strings.GetInitials(Modelo?.Nombre)</div>
+            <div class="mr-3 flex h-12 w-12 min-w-9 items-center justify-center rounded-full bg-zinc-200 text-sm font-semibold uppercase text-gray-700 dark:bg-zinc-700 dark:text-zinc-300">@Global.Utilities.Strings.GetInitials(Modelo?.Nombre)</div>
         }
         else
         {
-            <img class="mr-3 h-9 w-9 min-w-9 rounded-full" src="data:image/png;base64,@Base64" alt="Avatar">
+            <img class="mr-3 h-12 w-12 min-w-9 rounded-full" src="data:image/png;base64,@Base64" alt="Avatar">
         }
 
         @* Datos. *@
