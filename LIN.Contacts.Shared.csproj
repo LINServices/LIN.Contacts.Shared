@@ -12,6 +12,8 @@
   </ItemGroup>
 
   <ItemGroup>
+    <PackageReference Include="LIN.Access.Auth" Version="1.0.0" />
+    <PackageReference Include="LIN.Access.Contacts" Version="1.0.0" />
     <PackageReference Include="Microsoft.AspNetCore.Components.Web" Version="8.0.8" />
   </ItemGroup>
 
@@ -20,7 +22,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\AccesoAPI\LIN.Access.Contacts\LIN.Access.Contacts.csproj" />
     <ProjectReference Include="..\LIN.Emma.UI\LIN.Emma.UI\LIN.Emma.UI.csproj" />
   </ItemGroup>
 
