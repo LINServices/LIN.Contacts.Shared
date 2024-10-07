@@ -35,7 +35,7 @@ public partial class ContactComponent
     /// <summary>
     /// Abrir el contacto.
     /// </summary>
-    void Open()
+    private void Open()
     {
 
         // Validar el modelo.
@@ -44,7 +44,7 @@ public partial class ContactComponent
 
         OnClick(Modelo);
         // Abrir.
-      
+
 
     }
 
@@ -53,14 +53,14 @@ public partial class ContactComponent
     /// <summary>
     /// Abrir mail.
     /// </summary>
-    async void Mail() => await JSRuntime.InvokeVoidAsync("enviarCorreo", Modelo?.Mails[0].Email);
+    private async void Mail() => await JSRuntime.InvokeVoidAsync("enviarCorreo", Modelo?.Mails[0].Email);
 
 
 
     /// <summary>
     /// Abrir llamada.
     /// </summary>
-    async void Call() => await JSRuntime.InvokeVoidAsync("llamar", Modelo?.Phones[0].Number);
+    private async void Call() => await JSRuntime.InvokeVoidAsync("llamar", Modelo?.Phones[0].Number);
 
 
 }

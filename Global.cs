@@ -1,3 +1,3 @@
-﻿global using Microsoft.AspNetCore.Components;
+﻿global using LIN.Access.Contacts;
 global using LIN.Types.Contacts.Models;
-global using LIN.Access.Contacts;
+global using Microsoft.AspNetCore.Components;

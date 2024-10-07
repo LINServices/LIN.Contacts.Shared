@@ -2,7 +2,6 @@
 
 namespace LIN.Contacts.Shared.Components;
 
-
 public partial class DeviceControl
 {
 
@@ -13,13 +12,11 @@ public partial class DeviceControl
     public DeviceModel? Model { get; set; }
 
 
-
     /// <summary>
     /// Evento al hacer click.
     /// </summary>
     [Parameter]
     public Action<DeviceModel?>? OnClick { get; set; }
-
 
 
     /// <summary>
@@ -31,7 +28,6 @@ public partial class DeviceControl
     }
 
 
-
     /// <summary>
     /// Obtener el icono.
     /// </summary>
@@ -39,24 +35,16 @@ public partial class DeviceControl
     {
 
         // Segun.
-        switch (Model?.Platform.ToLower().Trim())
+        return (Model?.Platform.ToLower().Trim()) switch
         {
             // Android.
-            case "android":
-                return "./img/android.png";
-
+            "android" => "./img/android.png",
             // Windows
-            case "windows":
-                return "./img/windows.png";
-
+            "windows" => "./img/windows.png",
             // Windows
-            case "web":
-                return "./img/web.png";
-
-        }
-        return "";
-
+            "web" => "./img/web.png",
+            _ => "",
+        };
     }
-
 
 }

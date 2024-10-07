@@ -1,10 +1,5 @@
-﻿
-using LIN.Types.Exp.Search.Models;
-using Microsoft.JSInterop;
-using SILF.Script.Elements.Functions;
-using SILF.Script.Enums;
+﻿using Microsoft.JSInterop;
 using SILF.Script.Interfaces;
-using System.Reflection;
 
 namespace LIN.Contacts.Shared.Drawers;
 
@@ -12,8 +7,7 @@ namespace LIN.Contacts.Shared.Drawers;
 
 public partial class EmmaDrawer
 {
-
-    LIN.Emma.UI.Emma DocEmma { get; set; }
+    private LIN.Emma.UI.Emma DocEmma { get; set; }
 
 
 
@@ -62,7 +56,7 @@ public partial class EmmaDrawer
 
 }
 
-class A : IConsole
+internal class A : IConsole
 {
     public void InsertLine(string error, string result, SILF.Script.Enums.LogLevel logLevel)
     {

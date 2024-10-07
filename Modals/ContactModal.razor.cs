@@ -1,5 +1,4 @@
-﻿using LIN.Contacts.Shared.Modals;
-using Microsoft.JSInterop;
+﻿using Microsoft.JSInterop;
 
 namespace LIN.Contacts.Shared.Modals;
 
@@ -79,14 +78,14 @@ public partial class ContactModal
     /// <summary>
     /// Imagen en base64.
     /// </summary>
-    string Img64 => Convert.ToBase64String(Modelo?.Picture ?? []);
+    private string Img64 => Convert.ToBase64String(Modelo?.Picture ?? []);
 
 
 
     /// <summary>
     /// Eliminar.
     /// </summary>
-    async void Delete()
+    private async void Delete()
     {
         if (Modelo == null)
             return;
@@ -99,7 +98,7 @@ public partial class ContactModal
     /// <summary>
     /// Abrir modelo de eliminar.
     /// </summary>
-    void OpenDelete() => DeleteModal?.Show();
+    private void OpenDelete() => DeleteModal?.Show();
 
 
 

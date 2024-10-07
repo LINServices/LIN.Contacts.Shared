@@ -1,19 +1,15 @@
-﻿using LIN.Emma.UI.Classes;
-using LIN.Types.Contacts.Transient;
+﻿using LIN.Types.Contacts.Transient;
 using SILF.Script.Interfaces;
 
 namespace LIN.Contacts.Shared.Online;
 
-
 public class Realtime
 {
-
 
     /// <summary>
     /// Id del dispositivo.
     /// </summary>
     public static string DeviceName { get; set; } = string.Empty;
-
 
 
     /// <summary>
@@ -22,20 +18,16 @@ public class Realtime
     public static string DeviceKey { get; private set; } = string.Empty;
 
 
-
     /// <summary>
     /// Funciones
     /// </summary>
     public static List<IFunction> Actions { get; set; } = [];
 
 
-
     /// <summary>
     /// Hub de tiempo real.
     /// </summary>
     public static LIN.Access.Contacts.Hubs.ContactsAccessHub? InventoryAccessHub { get; set; } = null;
-
-
 
 
     /// <summary>
@@ -66,7 +58,6 @@ public class Realtime
     }
 
 
-
     /// <summary>
     /// Construye las funciones.
     /// </summary>
@@ -74,7 +65,6 @@ public class Realtime
     {
         Actions = functions.ToList();
     }
-
 
 
     /// <summary>
@@ -96,7 +86,6 @@ public class Realtime
     }
 
 
-
     /// <summary>
     /// Cerrar conexión.
     /// </summary>
@@ -106,6 +95,5 @@ public class Realtime
         InventoryAccessHub?.Dispose();
         InventoryAccessHub = null;
     }
-
 
 }

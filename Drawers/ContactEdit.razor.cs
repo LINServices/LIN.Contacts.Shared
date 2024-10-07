@@ -25,7 +25,7 @@ public partial class ContactEdit
     /// <summary>
     /// Modelo del contacto.
     /// </summary>
-    ContactModel Modelo { get; set; } = new()
+    private ContactModel Modelo { get; set; } = new()
     {
         Phones = [new()],
         Mails = [new()]
