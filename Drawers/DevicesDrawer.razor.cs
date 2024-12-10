@@ -1,5 +1,4 @@
-﻿
-using LIN.Contacts.Shared.Online;
+﻿using LIN.Contacts.Shared.Online;
 using LIN.Types.Contacts.Transient;
 using LIN.Types.Responses;
 using Microsoft.JSInterop;
@@ -8,7 +7,6 @@ namespace LIN.Contacts.Shared.Drawers;
 
 public partial class DevicesDrawer
 {
-
 
     /// <summary>
     /// ID del elemento Html.
@@ -44,7 +42,6 @@ public partial class DevicesDrawer
 
         // Abrir el elemento.
         await JS.InvokeVoidAsync("ShowBottomDrawer", _id, $"btn-close-{_id}", "close-all-all");
-
 
         // Si es el primer open.
         if (FirstShow)
