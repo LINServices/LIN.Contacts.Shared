@@ -82,7 +82,7 @@ public partial class ContactDrawer
                 }
             ],
             Type = (Types.Contacts.Enumerations.ContactTypes)TypeContact,
-            Nombre = Name,
+            Name = Name,
             Phones =
             [
                 new()

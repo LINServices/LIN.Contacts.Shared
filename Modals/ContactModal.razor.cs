@@ -73,15 +73,6 @@ public partial class ContactModal
 
     }
 
-
-
-    /// <summary>
-    /// Imagen en base64.
-    /// </summary>
-    private string Img64 => Convert.ToBase64String(Modelo?.Picture ?? []);
-
-
-
     /// <summary>
     /// Eliminar.
     /// </summary>

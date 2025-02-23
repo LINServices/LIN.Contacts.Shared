@@ -22,16 +22,6 @@ public partial class ContactComponent
     public Action<ContactModel>? OnClick { get; set; }
 
 
-
-
-
-    /// <summary>
-    /// Imagen del contacto en base 64.
-    /// </summary>
-    private string Base64 => Convert.ToBase64String(Modelo?.Picture ?? []);
-
-
-
     /// <summary>
     /// Abrir el contacto.
     /// </summary>

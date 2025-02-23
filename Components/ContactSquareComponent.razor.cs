@@ -27,10 +27,4 @@ public partial class ContactSquareComponent
         await JSRuntime.InvokeVoidAsync("enviarCorreo", Modelo?.Mails[0].Email);
     }
 
-
-    /// <summary>
-    /// Obtiene la imagen en base64.
-    /// </summary>
-    private string base64 => Convert.ToBase64String(Modelo?.Picture ?? []);
-
 }
